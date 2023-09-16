@@ -1,0 +1,4 @@
+baseURL = 'https://blog.lunef.xyz/'
+languageCode = 'en-us'
+title = "Lucas Denefle's Blog"
+theme = "hugo-xmin"
