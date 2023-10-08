@@ -1,0 +1,4 @@
+<head>
+    <link rel="stylesheet" href="css/styles.css">
+    <title>{{ if .IsHome }}Home - {{ else }}{{ if .Page.Title }}{{ .Page.Title }} - {{ end }}{{ end }}{{ .Site.Title }}</title>
+</head>

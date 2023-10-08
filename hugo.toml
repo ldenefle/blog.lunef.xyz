@@ -1,4 +1,19 @@
 baseURL = 'https://blog.lunef.xyz/'
 languageCode = 'en-us'
 title = "Lucas Denefle's Blog"
-theme = "blog-theme"
+theme = "lunef"
+
+[menu]
+[[menu.main]]
+    name = 'Home'
+    url = '/'
+[[menu.main]]
+    name = 'Posts'
+    url = '/posts'
+[[menu.main]]
+    name = 'Projects'
+    url = '/projects'
+[[menu.main]]
+    name = 'About'
+    url = '/about'
+

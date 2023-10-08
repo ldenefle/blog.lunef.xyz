@@ -1,0 +1,9 @@
+<html>
+    {{ partial "head.html" . }}
+    <body>
+        {{ partial "banner.html" }}
+        {{ partial "menu.html" . }}
+        {{ .Page.Content }}
+    </body>
+</html>
+
