@@ -3,7 +3,14 @@
     <body>
         {{ partial "banner.html" }}
         {{ partial "menu.html" . }}
-        {{ .Page.Content }}
+
+        <div class="title">
+            <h1>{{.Page.Title}} </h1>
+        </div>
+
+        <div class="content">
+            {{ .Page.Content }}
+        </div>
     </body>
 </html>
 

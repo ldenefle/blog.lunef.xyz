@@ -18,3 +18,26 @@ body {
 .error {
     text-align: center;
 }
+
+.title {
+    max-width: 500px;
+    margin: auto;
+}
+
+.content {
+    max-width: 500px;
+    margin: auto;
+}
+
+.content-table {
+    border: 1px solid;
+    margin: auto;
+    width: 500px;
+}
+
+tr td {
+    border: 1px solid;
+    padding: 3px;
+    text-align: left;
+}
+

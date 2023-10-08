@@ -3,6 +3,22 @@
     <body>
         {{ partial "banner.html" }}
         {{ partial "menu.html" . }}
+        <div class="title">
+            <h1>{{.Title}} </h1>
+        </div>
+
+        <div class="content">
+            {{ .Content }}
+        </div>
+
+        <table class="content-table">
+          {{ range .Pages }}
+            <tr>
+                <td>{{ .Date.Format "2006-01-02" }} </td>
+                <td><a href="{{ .Permalink }}">{{ .Title }} </a></td>
+            </tr>
+          {{ end }}
+        </table>
     </body>
 </html>
 
