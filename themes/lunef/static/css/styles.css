@@ -19,19 +19,19 @@ body {
 }
 
 .title {
-    max-width: 500px;
+    max-width: 600px;
     margin: auto;
 }
 
 .content {
-    max-width: 500px;
+    max-width: 600px;
     margin: auto;
 }
 
 .content-table {
     border: 1px solid;
     margin: auto;
-    width: 500px;
+    width: 600px;
 }
 
 tr td {
