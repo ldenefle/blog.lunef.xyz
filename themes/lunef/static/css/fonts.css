@@ -41,5 +41,5 @@
 }
 
 body {
-    font-family: CozetteVector, "Space Mono", monospace;
+    font-family: unifont, CozetteVector, "Space Mono", monospace;
 }

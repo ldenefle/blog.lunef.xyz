@@ -7,7 +7,7 @@
   outputs = { self, nixpkgs, flake-utils }:
     flake-utils.lib.eachDefaultSystem (system:
       let
-        packageName = "blog-lunef-xyz";
+        name = "blog-lunef-xyz";
         version = "0.0.0";
 
         pkgs = import nixpkgs {
@@ -19,25 +19,22 @@
             hugo
           ];
 
-        shell = pkgs.mkShell {
-          name = packageName + "-env";
-          buildInputs = deps;
+        shell = with pkgs; mkShell {
+          name = name + "-env";
+          buildInputs = deps ++ [
+            (writeScriptBin "serve" ''
+              hugo server --navigateToChanged --config ${(builtins.toString ./.) + "/hugo.toml"}
+            '')
+          ];
         };
 
         blog = pkgs.stdenv.mkDerivation {
-          name = packageName;
-          version = version;
+          inherit name;
+          inherit version;
           src = ./.;
 
-          buildInputs = [pkgs.hugo];
-          dontConfigure = true;
-
-          # Copy source into working directory and 
           buildPhase = ''
               cp -r $src/* .
-              # I need to specify the config because only more recent builds of hugo
-              # look for a file named hugo.toml.
-              ${pkgs.hugo}/bin/hugo version
               ${pkgs.hugo}/bin/hugo --config hugo.toml
           '';
 
@@ -50,7 +47,7 @@
         # Used with nix develop
         devShell = shell;
 
-        defaultPackage = self.packages.${system}.${packageName};
+        defaultPackage = self.packages.${system}.${name};
 
         # Use with nix build . generates CI docker
         packages.default = blog;
