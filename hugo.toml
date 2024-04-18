@@ -5,9 +5,6 @@ theme = "lunef"
 
 [menu]
 [[menu.main]]
-    name = 'Home'
-    url = '/'
-[[menu.main]]
     name = 'Posts'
     url = '/posts'
 [[menu.main]]
