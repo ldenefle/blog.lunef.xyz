@@ -27,6 +27,17 @@ body {
   background-color: $primary-background;
 }
 
+.top-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.content-container {
+    padding: 0 1em;
+    max-width: $site-width;
+}
+
 .cpu {
     text-align: center;
 }
@@ -41,16 +52,6 @@ body {
 
 .error {
     text-align: center;
-}
-
-.title {
-    max-width: $site-width;
-    margin: auto;
-}
-
-.content {
-    max-width: $site-width;
-    margin: auto;
 }
 
 .content-table {

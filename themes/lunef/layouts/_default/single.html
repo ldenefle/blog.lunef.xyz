@@ -4,12 +4,16 @@
         {{ partial "banner.html" }}
         {{ partial "menu.html" . }}
 
-        <div class="title">
-            <h1>{{.Page.Title}} </h1>
-        </div>
+        <div class="top-container">
+            <div class="content-container">
+                <div class="title">
+                    <h1>{{.Page.Title}} </h1>
+                </div>
 
-        <div class="content">
-            {{ .Page.Content }}
+                <div class="content">
+                    {{ .Page.Content }}
+                </div>
+            </div>
         </div>
     </body>
 
