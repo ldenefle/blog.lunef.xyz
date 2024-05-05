@@ -69,3 +69,19 @@ tr td {
   max-width: $site-width;
   height: auto;
 }
+
+
+a {
+    text-decoration: none;
+    padding: 0 .2em 0 .2em;
+    border-radius: .3em;
+    color: $normal-blue;
+}
+
+a:focus,
+a:hover,
+a.active {
+    background-color: $bright-black;
+    color: $normal-blue;
+}
+
